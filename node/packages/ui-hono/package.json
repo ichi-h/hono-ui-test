@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-ui-hono",
+  "version": "0.1.0",
+  "private": true,
+  "pnpm": true,
+  "main": "./dist/portfolio-ui-hono.umd.js",
+  "module": "./dist/portfolio-ui-hono.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/portfolio-ui-hono.es.js",
+      "require": "./dist/portfolio-ui-hono.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "portfolio-styles": "workspace:*"
+  }
+}
